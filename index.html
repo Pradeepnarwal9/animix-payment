@@ -45,10 +45,6 @@
       animation-delay: 0.3s;
     }
 
-    .card h2 {
-      margin: 10px 0;
-    }
-
     .price {
       font-size: 20px;
       color: green;
@@ -84,10 +80,22 @@
       border: none;
     }
 
+    .info-section {
+      background: white;
+      color: black;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      text-align: left;
+    }
+
     footer {
-      margin-top: 50px;
+      margin-top: 30px;
       font-size: 14px;
       opacity: 0.8;
+      padding-bottom: 20px;
     }
 
     @keyframes slideUp {
@@ -133,6 +141,23 @@
   <button onclick="payNow()">Proceed to Pay</button>
 </div>
 
+<!-- ✅ ADDED SECTION (IMPORTANT FOR APPROVAL) -->
+
+<div class="info-section">
+  <h2>About Animix</h2>
+  <p>Animix is an online marketplace to buy pets, pet food, and accessories easily and securely.</p>
+
+  <h2>Contact Us</h2>
+  <p>Email: animixofficial@gmail.com</p>
+  <p>Phone: +91 9363090628</p>
+
+  <h2>Privacy Policy</h2>
+  <p>We respect your privacy. Your data is secure and used only for order processing.</p>
+
+  <h2>Terms & Conditions</h2>
+  <p>All purchases are subject to availability. Payments are securely processed via Razorpay.</p>
+</div>
+
 <footer>
   Secure payments powered by Razorpay
 </footer>
@@ -151,7 +176,7 @@ function buyNow(product, amount) {
 function payNow() {
 
   var options = {
-    "key": "rzp_test_S3ispZWNed4B9K", // YOUR TEST KEY
+    "key": "rzp_test_S3ispZWNed4B9K",
     "amount": selectedAmount * 100,
     "currency": "INR",
     "name": "Animix",
